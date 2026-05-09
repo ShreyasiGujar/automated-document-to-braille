@@ -1,0 +1,55 @@
+{
+  "matras": {
+    "ा": {
+      "type": "post",
+      "braille": "⠜"
+    },
+    "ि": {
+      "type": "pre",
+      "braille": "⠊"
+    },
+    "ी": {
+      "type": "post",
+      "braille": "⠔"
+    },
+    "ु": {
+      "type": "post",
+      "braille": "⠥"
+    },
+    "ू": {
+      "type": "post",
+      "braille": "⠳"
+    },
+    "े": {
+      "type": "post",
+      "braille": "⠑"
+    },
+    "ै": {
+      "type": "post",
+      "braille": "⠌"
+    },
+    "ो": {
+      "type": "post",
+      "braille": "⠕"
+    },
+    "ौ": {
+      "type": "post",
+      "braille": "⠪"
+    }
+  },
+
+  "modifiers": {
+    "ं": {
+      "type": "post",
+      "braille": "⠂"
+    },
+    "ः": {
+      "type": "post",
+      "braille": "⠄"
+    },
+    "्": {
+      "type": "halant",
+      "braille": ""
+    }
+  }
+}
