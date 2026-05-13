@@ -1,90 +1,45 @@
 # Marathi and English Braille OCR System
 
-An open source Optical Character Recognition (OCR) system designed to recognize and process Marathi and English Braille documents. This project focuses on improving accessibility by converting Braille patterns into readable digital text using image processing and OCR techniques.
+An open source Braille processing and OCR system designed for Marathi and English language support. The project focuses on Braille conversion, text normalization, language correction, and structured output generation for accessibility applications.
 
 ---
 
 # Overview
 
-This project provides a complete pipeline for detecting, extracting, and converting Braille characters from images into readable Marathi and English text. It is intended for:
+This project provides a complete processing pipeline for:
+- Braille validation
+- Braille to text conversion
+- Text to Braille conversion
+- Marathi normalization
+- AI based text correction
+- Language detection
+- PDF output generation
 
-- Developers working on accessibility solutions
-- Researchers in OCR and assistive technology
-- Students exploring computer vision and machine learning
-- Organizations supporting visually impaired communities
-
-The system combines image preprocessing, Braille segmentation, OCR mapping, and text generation into a modular workflow.
+The system is designed to improve accessibility and support digital processing of Marathi and English Braille content.
 
 ---
 
 # Features
 
-- Marathi Braille recognition
-- English Braille recognition
-- Image preprocessing pipeline
-- Noise reduction and enhancement
-- Braille dot detection
-- Character segmentation
-- OCR engine integration
-- Unicode text output
+- Marathi Braille support
+- English Braille support
+- Braille to text conversion
+- Text to Braille conversion
+- Marathi language normalization
+- AI based text correction
+- Structured text preservation
+- Language detection
 - PDF export support
-- Embosser-ready formatting
-- Modular architecture
-- Easy configuration through constants/config files
-- Web interface support
-- CLI execution support
-- OCR engine comparison support
-- Open source and customizable
-
----
-
-# System Architecture
-
-```text
-                +-------------------+
-                | Input Braille Img |
-                +---------+---------+
-                          |
-                          v
-                +-------------------+
-                | Image Preprocess  |
-                | Resize / Denoise  |
-                +---------+---------+
-                          |
-                          v
-                +-------------------+
-                | Braille Detection |
-                | Dot Extraction    |
-                +---------+---------+
-                          |
-                          v
-                +-------------------+
-                | Character Mapping |
-                | Marathi / English |
-                +---------+---------+
-                          |
-                          v
-                +-------------------+
-                | OCR Processing    |
-                +---------+---------+
-                          |
-                          v
-                +-------------------+
-                | Text Generation   |
-                +---------+---------+
-                          |
-                          v
-                +-------------------+
-                | Output Export     |
-                | TXT / PDF / JSON  |
-                +-------------------+
-```
+- Unicode compatible output
+- Modular pipeline architecture
+- Flask based web interface
+- JSON based Braille mappings
 
 ---
 
 # Project Structure
 
-```
+```text
 marathi-and-english-braille-ocr-system/
 │
 ├── ai_corrector.py              # AI based text correction module
@@ -105,39 +60,36 @@ marathi-and-english-braille-ocr-system/
 ├── pipeline.py                  # Complete OCR processing pipeline
 └── README.md                    # Project documentation
 ```
+
 ---
 
 # File Descriptions
 
 | File Name | Description |
 |------------|-------------|
-| `ai_corrector.py` | Performs AI based correction and refinement of OCR generated text to improve recognition accuracy. |
-| `app.py` | Main application entry point responsible for running the web interface and handling user interaction. |
-| `bharati_braille_map.json` | Contains Bharati Braille mappings used for converting Braille patterns into readable Marathi and English characters. |
-| `braille_output.pdf` | Generated PDF output file containing the final recognized and formatted Braille text. |
-| `cleaner.py` | Cleans noisy OCR output, removes unwanted symbols, and improves text formatting consistency. |
-| `constants.py` | Stores global constants, configurable parameters, paths, thresholds, and system settings used across the project. |
-| `converter.py` | Converts extracted Braille dot patterns into corresponding Unicode text characters. |
-| `DejaVuSans.ttf` | Font file used during PDF generation to support Unicode Marathi and English characters correctly. |
-| `detector.py` | Detects Braille dots and identifies Braille cell structures from processed images. |
-| `extractor.py` | Extracts segmented Braille cells and prepares them for OCR mapping and conversion. |
-| `marathi_corrector.py` | Performs Marathi specific language correction and improves sentence level text accuracy. |
-| `marathi_matra_map.json` | Stores Marathi matra mappings and language specific character relationships for accurate conversion. |
-| `normalizer.py` | Normalizes OCR output text by standardizing spacing, symbols, and character formatting. |
-| `ocr_comparison.py` | Compares OCR engines such as Tesseract and EasyOCR for performance, speed, and accuracy evaluation. |
-| `pdf_generator.py` | Generates structured and embosser-ready PDF files from the final OCR processed text. |
-| `pipeline.py` | Controls the complete OCR workflow including preprocessing, detection, extraction, conversion, correction, and output generation. |
-| `README.md` | Contains complete project documentation, installation guide, usage instructions, and contributor information. |
+| `ai_corrector.py` | Performs AI based correction and refinement of OCR generated text. |
+| `app.py` | Main application entry point responsible for running the web interface. |
+| `bharati_braille_map.json` | Stores Bharati Braille mappings for Marathi and English conversion. |
+| `braille_output.pdf` | Generated PDF output file containing formatted Braille text. |
+| `cleaner.py` | Cleans noisy OCR output and improves formatting consistency. |
+| `constants.py` | Stores global constants, configurable parameters, and system settings. |
+| `converter.py` | Converts Braille patterns into readable Unicode text. |
+| `DejaVuSans.ttf` | Unicode font file used during PDF generation. |
+| `detector.py` | Detects Braille patterns and language information. |
+| `extractor.py` | Extracts Braille cells and prepares them for processing. |
+| `marathi_corrector.py` | Applies Marathi sentence correction and text refinement. |
+| `marathi_matra_map.json` | Contains Marathi matra and character mappings. |
+| `normalizer.py` | Performs text normalization and cleanup operations. |
+| `ocr_comparison.py` | Compares OCR engine outputs and performance. |
+| `pdf_generator.py` | Generates structured PDF output from processed text. |
+| `pipeline.py` | Controls the complete text processing and Braille conversion workflow. |
+| `README.md` | Contains complete project documentation and usage instructions. |
 
 ---
 
 # How It Works
 
-The system follows a multi stage text and Braille processing pipeline designed for Marathi and English Braille conversion, correction, and normalization.
-
----
-
-## Processing Pipeline
+The system follows a multi stage text and Braille processing pipeline.
 
 ```text
               +------------------+
@@ -216,193 +168,18 @@ The system follows a multi stage text and Braille processing pipeline designed f
 
 ---
 
-# Pipeline Stages
-
-## 1. Structure Preservation
-
-The input text structure is preserved before cleaning begins.  
-This helps maintain:
-- line breaks
-- paragraph formatting
-- spacing consistency
-
-Function used:
-
-```python
-preserve_structure()
-```
-
----
-
-## 2. Text Cleaning
-
-Noise, unwanted symbols, and malformed characters are removed.
-
-Function used:
-
-```python
-clean_text()
-```
-
----
-
-## 3. Braille Validation
-
-The system checks whether the input already contains Braille patterns.
-
-Function used:
-
-```python
-validate_braille()
-```
-
-If Braille is detected:
-- Braille is converted back into readable text
-- Processing continues on normalized text
-
----
-
-## 4. Marathi Normalization
-
-Marathi Unicode inconsistencies and formatting problems are corrected.
-
-Function used:
-
-```python
-normalize_marathi()
-```
-
----
-
-## 5. Final Cleanup
-
-Additional cleanup removes:
-- extra whitespace
-- invalid formatting
-- repeated line breaks
-
-Function used:
-
-```python
-final_cleanup()
-```
-
----
-
-## 6. Language Detection
-
-The pipeline identifies whether the text contains:
-- Marathi
-- English
-- mixed language content
-
-Function used:
-
-```python
-detect_language()
-```
-
----
-
-## 7. Marathi Sentence Correction
-
-If Marathi text is detected, sentence level correction is applied.
-
-Function used:
-
-```python
-correct_sentence()
-```
-
-This improves:
-- spelling consistency
-- sentence readability
-- OCR correction quality
-
----
-
-## 8. Character Sanitization
-
-Regex based filtering removes unsupported symbols while preserving:
-- Marathi Unicode characters
-- English alphabets
-- numbers
-- punctuation
-
----
-
-## 9. Braille Conversion
-
-The cleaned text is converted into Braille representation.
-
-Function used:
-
-```python
-text_to_braille()
-```
-
----
-
-## 10. Logging & Result Generation
-
-The system logs:
-- text length
-- language information
-- Braille detection results
-
-Function used:
-
-```python
-log_results()
-```
-
-The final pipeline output includes:
-
-```python
-{
-    "clean_text": final_text,
-    "braille_text": braille,
-    "language": language_info
-}
-```
----
-
 # Prerequisites
 
-## Python
+Before running the project, make sure the following is installed:
 
-- Python 3.9+
+- Python 3.9 or higher
 - pip
-- virtualenv recommended
 
----
-
-# Install Tesseract OCR
-
-## Ubuntu
+Check installation:
 
 ```bash
-sudo apt update
-sudo apt install tesseract-ocr
-```
-
-## macOS
-
-```bash
-brew install tesseract
-```
-
-## Windows
-
-1. Download installer from:
-https://github.com/UB-Mannheim/tesseract/wiki
-
-2. Add Tesseract path to environment variables.
-
-Example:
-
-```text
-C:\Program Files\Tesseract-OCR
+python --version
+pip --version
 ```
 
 ---
@@ -415,44 +192,20 @@ C:\Program Files\Tesseract-OCR
 git clone https://github.com/aryan-07-code/marathi-and-english-braille-ocr-system.git
 ```
 
-## Move Into Project
+---
+
+## Move Into Project Directory
 
 ```bash
 cd marathi-and-english-braille-ocr-system
 ```
 
-## Create Virtual Environment
-
-### Windows
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-### Linux/macOS
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-## Install Dependencies Manually
-
-Install the required Python libraries:
-
-```bash
-pip install flask regex reportlab
-```
-
-If additional modules are used in your environment, install them similarly using `pip`.
-
 ---
 
-## Run the Application
+## Install Dependencies
 
 ```bash
-python app.py
+pip install -r requirements.txt
 ```
 
 ---
@@ -461,13 +214,11 @@ python app.py
 
 ## Run the Web Application
 
-Start the Flask application:
-
 ```bash
 python app.py
 ```
 
-After running the command, open the local server URL shown in the terminal, usually:
+After running the command, open:
 
 ```text
 http://127.0.0.1:5000
@@ -478,24 +229,16 @@ http://127.0.0.1:5000
 # Application Workflow
 
 1. Upload or enter Marathi / English text or Braille input.
-2. The system cleans and normalizes the text.
-3. Braille patterns are validated and processed.
-4. Marathi language correction is applied if detected.
-5. Clean text is converted into Braille representation.
-6. Output is generated and exported as formatted text or PDF.
+2. The system preserves text structure.
+3. Text cleaning and normalization are applied.
+4. Braille validation is performed.
+5. Marathi correction is applied if Marathi text is detected.
+6. Text is converted into Braille representation.
+7. Results are generated and exported.
 
 ---
 
-# Output
-
-The system generates:
-
-- Clean normalized text
-- Braille converted output
-- Language detection results
-- PDF output support
-
-Example output:
+# Example Output
 
 ```python
 {
@@ -510,69 +253,18 @@ Example output:
 
 ---
 
-# Configuration
+# Output Features
 
-The project uses `constants.py` and JSON configuration files for customization.
-
-Example configurable parameters:
-
-```python
-IMAGE_SIZE = (512, 512)
-THRESHOLD_VALUE = 127
-OCR_ENGINE = "tesseract"
-LANGUAGE = "marathi"
-EXPORT_PDF = True
-```
-
----
-
-# Output Formats
-
-| Format | Description |
-|--------|-------------|
-| TXT | Plain recognized text |
-| PDF | Embosser-ready formatted PDF |
-| JSON | Structured OCR output |
-
----
-
-# Bharati Braille Standard
-
-This project follows Bharati Braille conventions for Indian languages.
-
-## Sample Mapping
-
-| Braille Pattern | Character |
-|----------------|-----------|
-| ⠁ | A |
-| ⠃ | B |
-| ⠉ | C |
-| ⠅ | K |
-| ⠍ | M |
-
----
-
-# OCR Engine Comparison
-
-| Feature | Tesseract | EasyOCR |
-|---------|-----------|----------|
-| Speed | Fast | Medium |
-| Accuracy | High | High |
-| Marathi Support | Moderate | Better |
-| CPU Usage | Low | Medium |
-| GPU Support | No | Yes |
+The system supports:
+- Clean normalized text output
+- Braille conversion output
+- Language detection results
+- PDF generation
+- Unicode compatible formatting
 
 ---
 
 # Troubleshooting
-
-## Tesseract Not Found
-
-### Fix
-
-Add Tesseract installation path to environment variables.
-
----
 
 ## ModuleNotFoundError
 
@@ -582,7 +274,7 @@ A required Python module is missing.
 
 ### Fix
 
-Install the missing module manually using pip.
+Install the missing dependency manually using pip.
 
 Examples:
 
@@ -598,29 +290,75 @@ pip install reportlab
 pip install regex
 ```
 
-If another module is missing, install it using:
+---
+
+## Application Not Starting
+
+### Problem
+
+`app.py` fails to run.
+
+### Fix
+
+Run the application from the project root directory:
 
 ```bash
-pip install module_name
+python app.py
 ```
 
 ---
 
-## OCR Accuracy Low
+## Marathi Characters Display Incorrectly in PDF
+
+### Problem
+
+Marathi Unicode characters appear broken in generated PDFs.
 
 ### Fix
 
-- Use high resolution images
-- Improve lighting conditions
-- Apply preprocessing properly
+Ensure the `DejaVuSans.ttf` font file exists in the project directory.
 
 ---
 
-## Virtual Environment Issues
+## Incorrect Output Formatting
+
+### Problem
+
+Output contains unwanted symbols or inconsistent formatting.
 
 ### Fix
 
-Delete and recreate the virtual environment.
+Check:
+- `cleaner.py`
+- `normalizer.py`
+- `marathi_corrector.py`
+
+---
+
+## Port Already in Use
+
+### Problem
+
+Flask server cannot start because the port is occupied.
+
+### Fix
+
+Run the application on another port:
+
+```bash
+flask run --port 5001
+```
+
+---
+
+# Future Improvements
+
+- Deep learning based Braille recognition
+- Real time webcam support
+- Mobile application integration
+- Multi language Braille support
+- Improved AI correction models
+- Cloud deployment support
 
 ---
 
@@ -628,33 +366,13 @@ Delete and recreate the virtual environment.
 
 Contributions are welcome.
 
-## Areas Needing Improvement
-
-- OCR accuracy optimization
-- Better Marathi Braille datasets
-- Deep learning integration
-- Improved UI/UX
-- Mobile support
-- Real-time camera OCR
-- Faster preprocessing pipeline
-
 ## Contribution Steps
 
-1. Fork repository
-2. Create feature branch
-3. Commit changes
-4. Push branch
-5. Create Pull Request
-
----
-
-# Future Scope
-
-- AI based Braille recognition
-- Real-time OCR using webcam
-- Mobile application integration
-- Speech output generation
-- Cloud deployment
-- Multi-language Braille support
+1. Fork the repository
+2. Create a new branch
+3. Make changes
+4. Commit updates
+5. Push the branch
+6. Create a Pull Request
 
 ---
