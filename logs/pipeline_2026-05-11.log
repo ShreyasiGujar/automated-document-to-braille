@@ -1,0 +1,57 @@
+2026-05-11 00:01:28,864 | WARNING | Using CPU. Note: This module is much faster with a GPU.
+2026-05-11 00:03:35,166 | WARNING | Using CPU. Note: This module is much faster with a GPU.
+2026-05-11 00:05:19,650 | WARNING | Using CPU. Note: This module is much faster with a GPU.
+2026-05-11 00:05:38,712 | INFO | ===== Processing Result =====
+2026-05-11 00:05:38,713 | INFO | text_length: 2
+2026-05-11 00:05:38,713 | INFO | language: {'marathi': False, 'english': True, 'mixed': False}
+2026-05-11 00:05:38,713 | INFO | braille_detected: False
+2026-05-11 00:05:38,713 | INFO | ============================
+2026-05-11 00:08:03,300 | WARNING | Using CPU. Note: This module is much faster with a GPU.
+2026-05-11 00:08:18,850 | INFO | ===== Processing Result =====
+2026-05-11 00:08:18,854 | INFO | text_length: 2
+2026-05-11 00:08:18,854 | INFO | language: {'marathi': False, 'english': True, 'mixed': False}
+2026-05-11 00:08:18,854 | INFO | braille_detected: False
+2026-05-11 00:08:18,854 | INFO | ============================
+2026-05-11 00:08:50,576 | INFO | ===== Processing Result =====
+2026-05-11 00:08:50,576 | INFO | text_length: 4
+2026-05-11 00:08:50,576 | INFO | language: {'marathi': True, 'english': False, 'mixed': False}
+2026-05-11 00:08:50,577 | INFO | braille_detected: False
+2026-05-11 00:08:50,577 | INFO | ============================
+2026-05-11 00:19:49,313 | INFO | ===== Processing Result =====
+2026-05-11 00:19:49,313 | INFO | text_length: 6
+2026-05-11 00:19:49,313 | INFO | language: {'marathi': True, 'english': False, 'mixed': False}
+2026-05-11 00:19:49,314 | INFO | braille_detected: False
+2026-05-11 00:19:49,314 | INFO | ============================
+2026-05-11 00:27:17,585 | INFO | ===== Processing Result =====
+2026-05-11 00:27:17,585 | INFO | text_length: 15
+2026-05-11 00:27:17,586 | INFO | language: {'marathi': True, 'english': False, 'mixed': False}
+2026-05-11 00:27:17,586 | INFO | braille_detected: False
+2026-05-11 00:27:17,586 | INFO | ============================
+2026-05-11 00:29:23,814 | INFO | ===== Processing Result =====
+2026-05-11 00:29:23,817 | INFO | text_length: 2028
+2026-05-11 00:29:23,817 | INFO | language: {'marathi': True, 'english': True, 'mixed': True}
+2026-05-11 00:29:23,818 | INFO | braille_detected: True
+2026-05-11 00:29:23,818 | INFO | ============================
+2026-05-11 00:29:41,056 | INFO | ===== Processing Result =====
+2026-05-11 00:29:41,056 | INFO | text_length: 2028
+2026-05-11 00:29:41,056 | INFO | language: {'marathi': True, 'english': True, 'mixed': True}
+2026-05-11 00:29:41,056 | INFO | braille_detected: True
+2026-05-11 00:29:41,056 | INFO | ============================
+2026-05-11 00:29:48,136 | INFO | ===== Processing Result =====
+2026-05-11 00:29:48,136 | INFO | text_length: 2028
+2026-05-11 00:29:48,138 | INFO | language: {'marathi': True, 'english': True, 'mixed': True}
+2026-05-11 00:29:48,138 | INFO | braille_detected: True
+2026-05-11 00:29:48,138 | INFO | ============================
+2026-05-11 00:29:53,547 | INFO | ===== Processing Result =====
+2026-05-11 00:29:53,548 | INFO | text_length: 2028
+2026-05-11 00:29:53,548 | INFO | language: {'marathi': True, 'english': True, 'mixed': True}
+2026-05-11 00:29:53,548 | INFO | braille_detected: True
+2026-05-11 00:29:53,548 | INFO | ============================
+2026-05-11 11:28:17,083 | WARNING | Using CPU. Note: This module is much faster with a GPU.
+2026-05-11 11:33:21,957 | WARNING | Using CPU. Note: This module is much faster with a GPU.
+2026-05-11 11:33:36,489 | INFO | ===== Processing Result =====
+2026-05-11 11:33:36,489 | INFO | text_length: 3
+2026-05-11 11:33:36,489 | INFO | language: {'marathi': False, 'english': True, 'mixed': False}
+2026-05-11 11:33:36,490 | INFO | braille_detected: False
+2026-05-11 11:33:36,490 | INFO | ============================
+2026-05-11 11:34:46,643 | WARNING | Using CPU. Note: This module is much faster with a GPU.

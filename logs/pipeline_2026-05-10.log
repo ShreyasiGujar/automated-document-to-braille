@@ -1,0 +1,5 @@
+2026-05-10 23:59:21,916 | WARNING | Using CPU. Note: This module is much faster with a GPU.
+2026-05-10 23:59:21,926 | WARNING | Downloading detection model, please wait. This may take several minutes depending upon your network connection.
+2026-05-10 23:59:27,777 | INFO | Download complete
+2026-05-10 23:59:27,777 | WARNING | Downloading recognition model, please wait. This may take several minutes depending upon your network connection.
+2026-05-10 23:59:43,746 | INFO | Download complete.

@@ -1,4 +1,11 @@
 import streamlit as st
+
+
+st.set_page_config(
+    page_title="Braille System",
+    layout="wide"
+)
+
 import os
 import fitz
 import cv2
@@ -18,8 +25,8 @@ def load_easyocr():
 reader = load_easyocr()
 
 
-st.set_page_config(page_title="Braille System", layout="wide")
-st.title("Multilingual OCR → Braille (English + Marathi)")
+##st.set_page_config(page_title="Braille System", layout="wide")
+##st.title("Multilingual OCR → Braille (English + Marathi)")
 
 
 st.sidebar.header("Settings")
@@ -93,14 +100,29 @@ if st.button("🚀 Process"):
 
         with col1:
             st.subheader(f"📝 OCR Output ({ocr_mode})")
-            st.text_area("", raw_text, height=300)
+            st.text_area(
+                "OCR Output",
+                raw_text,
+                height=300,
+                key="ocr_output"
+            )
 
         with col2:
             st.subheader("✨ Cleaned Text")
-            st.text_area("", clean_text, height=300)
+            st.text_area(
+                "Cleaned Text",
+                clean_text,
+                height=300,
+                key="cleaned_text"
+            )
 
         st.subheader("⠿ Braille Output")
-        st.text_area("", braille_text, height=200)
+        st.text_area(
+            "Braille Output",
+            braille_text,
+            height=200,
+            key="braille_output"
+        )
 
         pdf_file = generate_pdf(braille_text)
 
